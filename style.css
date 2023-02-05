@@ -44,6 +44,11 @@ body {
     padding: 1rem;
 }
 
+h2 {
+    color: #9C346B;
+    font-weight: 600;
+}
+
 .login {
     padding: 2rem;
     background-color: white;
