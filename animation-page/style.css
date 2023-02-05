@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #753c77;
+    font-family: 'Inter', sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #9C346B;
+    height: 4rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.link-container a {
+    display: inline-block;
+    padding: 1.4rem;
+    text-decoration: none;
+    color: #fff;
+    transition: all .5s;
+}
+
+.link-container a:hover {
+    background-color: #575757;
+}
+
+.animation-container {
+    border: 1px solid black;
+    height: 75vh;
+    background-image: url("../assests/background-desktop.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.runway {
+    width: 50rem;
+    position: absolute;
+    bottom: 5px;
+    animation: runway 2s ease-in-out forwards;
+}
+
+.plane {
+    width: 50rem;
+}
+
+.door {
+    width: 95px;
+    position: absolute;
+    top: 65px;
+    left: 226px;
+    animation: openDoor 1s 2s forwards;
+    z-index: 2;
+}
+
+.manu1 {
+    position: absolute;
+    width: 60px;
+    top: 110px;
+    left: 250px;
+    animation: manu1 2s 4s forwards;
+    z-index: 1;
+}
+
+.manu2 {
+    opacity: 0;
+    position: absolute;
+    width: 160px;
+    top: 65px;
+    left: 395px;
+    animation: manu2 2s 5s forwards;
+    z-index: 3;
+}
+
+.confetti {
+    width: 100%;
+    height: 100%;
+    background-image: url(../assests/confetti.png);
+    background-repeat: repeat;
+    background-size: contain;
+    transform: scale(0);
+    animation: confetti 2s 6s linear infinite forwards;
+}
+
+.coin1 {
+    width: 45px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    animation: coins 1s 8s linear infinite both;
+}
+
+.coin2 {
+    opacity: 0;
+    width: 45px;
+    position: absolute;
+    top: 0;
+    left: 250px;
+    animation: coins 1s 9s linear infinite both;
+}
+
+.coin3 {
+    opacity: 0;
+    width: 45px;
+    position: absolute;
+    top: 0;
+    left: 500px;
+    animation: coins 2s 8s linear infinite both;
+}
+
+.coin4 {
+    opacity: 0;
+    width: 45px;
+    position: absolute;
+    top: 0;
+    right: 666px;
+    animation: coins 1.5s 9s linear infinite both;
+}
+
+.coin5 {
+    opacity: 0;
+    width: 45px;
+    position: absolute;
+    top: 0;
+    left: 784px;
+    animation: coins 1s 7s linear infinite both;
+}
+
+.coin6 {
+    opacity: 0;
+    width: 45px;
+    position: absolute;
+    top: 0;
+    left: 865px;
+    animation: coins 2s 6.5s linear infinite both;
+}
+
+.coin7 {
+    opacity: 0;
+    width: 45px;
+    position: absolute;
+    top: 0;
+    left: 987px;
+    animation: coins 2s 8s linear infinite both;
+}
+
+.coin8 {
+    opacity: 0;
+    width: 45px;
+    position: absolute;
+    top: 0;
+    right: 250px;
+    animation: coins 1s 7s linear infinite both;
+}
+
+.desc-container {
+    width: 30rem;
+    padding: .5rem;
+    margin: auto;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.desc-container p {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.desc-container button {
+    width: 10rem;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    border-radius: 50px;
+    border: none;
+    color: #BD00FF;
+    background-color: #fffd00;
+    transition: all .5s;
+}
+
+.desc-container button:hover {
+    background-color: #ffff00b7;
+}
+
+.desc-container button:active {
+    transform: scale(96%);
+}
+
+.video-container {
+    text-align: center;
+}
+
+.video-container iframe {
+    width: 50rem;
+    height: 30rem;
+    border-radius: 10px;
+}
+
+@keyframes runway {
+    from {
+        transform: translateX(1100px);
+    }
+
+    to {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes openDoor {
+    from {
+        top: 65px;
+        left: 226px;
+    }
+
+    to {
+        top: 65px;
+        left: 285px;
+    }
+}
+
+@keyframes manu1 {
+    0% {
+        width: 60px;
+        top: 110px;
+        left: 250px;
+    }
+
+    20% {
+        width: 150px;
+        top: 90px;
+        left: 400px;
+    }
+
+    40% {
+        width: 150px;
+        top: 60px;
+        left: 400px;
+    }
+
+    60% {
+        width: 150px;
+        top: 90px;
+        left: 400px;
+    }
+
+    80% {
+        width: 150px;
+        top: 60px;
+        left: 400px;
+    }
+
+    100% {
+        width: 150px;
+        top: 90px;
+        left: 400px;
+        opacity: 0;
+    }
+}
+
+@keyframes manu2 {
+    0% {
+        top: 65px;
+        left: 395px;
+    }
+
+    25% {
+        top: 40px;
+        left: 395px;
+    }
+
+    50% {
+        top: 65px;
+        left: 395px;
+    }
+
+    75% {
+        top: 40px;
+        left: 395px;
+    }
+
+    100% {
+        top: 65px;
+        left: 395px;
+        opacity: 1;
+    }
+}
+
+@keyframes confetti {
+    0% {
+        transform: scale(0);
+    }
+
+    25% {
+        transform: scale(25%);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(50%);
+        opacity: 1;
+    }
+
+    75% {
+        transform: scale(75%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes coins {
+    0% {
+        transform: rotateX(0deg);
+        top: 0;
+        opacity: 0;
+    }
+
+    25% {
+        transform: rotateX(90deg);
+        top: 25%;
+        opacity: 1;
+    }
+
+    50% {
+        transform: rotateX(180deg);
+        top: 50%;
+        opacity: 1;
+    }
+
+    75% {
+        transform: rotateX(270deg);
+        top: 75%;
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotateX(360deg);
+        top: 100%;
+        opacity: 0;
+    }
+}

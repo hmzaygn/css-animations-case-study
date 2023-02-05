@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #5c5c5c;
+    font-family: 'Inter', sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #9C346B;
+    height: 4rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.link-container a {
+    display: inline-block;
+    padding: 1.4rem;
+    text-decoration: none;
+    color: #fff;
+    transition: all .5s;
+}
+
+.link-container a:hover {
+    background-color: #575757;
+}
+
+.header-logo {
+    text-align: center;
+    padding: 2rem;
+}
+
+.main {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* ******** Popup Menu ******** */
+.select {
+    position: relative;
+    display: flex;
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 7px;
+    left: 13.5rem;
+    background: #fff;
+    color: #9c346b;
+    cursor: pointer;
+    pointer-events: none;
+    transition: all .3s;
+}
+
+select {
+    appearance: none;
+    width: 15rem;
+    height: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    cursor: pointer;
+    background-image: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+/* ******** Switch Button ******** */
+.slide {
+    position: relative;
+    width: 15rem;
+}
+
+.slide input {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 7px;
+    outline: none;
+    border-radius: 3px;
+    position: absolute;
+
+}
+
+.slide input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #9c346b;
+    cursor: pointer;
+    z-index: 3;
+}
+
+#progressBar {
+    width: 50%;
+    height: 7px;
+    background: #9c346b;
+    border-radius: 3px;
+    position: absolute;
+    top: 2px;
+    left: 1px;
+    z-index: 2;
+}
+
+/* #selector {
+    height: 104px;
+    width: 48px;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.selectBtn {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+}
+
+#progressBar {
+    width: 50%;
+    height: 7px;
+    background: #9c346b;
+    border-radius: 3px;
+    position: absolute;
+    top: 8px;
+    left: 1px;
+    z-index: 2;
+} */
+
+/* .slide input {
+    appearance: none;
+    background-color: #fff;
+    border-radius: 10px;
+    outline: none;
+}
+
+.slide input::-webkit-slider-runnable-track {
+    appearance: none;
+    height: 8px;
+}
+
+.slide input::-webkit-slider-thumb {
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    margin-top: -6px;
+}
+
+.slide input:active::-webkit-slider-thumb {
+    background-color: #9c346b;
+    border: 1px solid #fff;
+} */
+
+.switch {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 22px;
+    margin-bottom: 30px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #765767;
+    transition: .5s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    top: 1px;
+    background-color: #fff;
+    transition: .5s;
+}
+
+.switch input {
+    display: none;
+}
+
+input:checked+.slider {
+    background-color: #9c346b;
+}
+
+input:checked+.slider:before {
+    transform: translateX(19px) rotateZ(45deg);
+    background: #fff;
+}
+
+/********* Input Range **********/
+
+
+.slider.round {
+    border-radius: 35px;
+}
+
+.slider.round:before {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transform: rotateZ(-45deg);
+}
+
+/*******CALENDAR*********/
+
+.calendar {
+    width: 25rem;
+}
+
+.month {
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month p {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.icons {
+    padding-right: 1rem;
+}
+
+.month i {
+    font-size: 30px;
+    color: #9c346b;
+}
+
+.weekdays {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 12.6%;
+    color: #666;
+    text-align: center;
+    font-weight: 600;
+}
+
+.days {
+    width: 100%;
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 12.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #777;
+}
+
+.days li .active {
+    padding: 5px;
+    background: #9c346b;
+    color: white !important
+}
